@@ -1,0 +1,329 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+    --primary: #5E91CA;
+    --background: #fff;
+    --hover:#2955a5;
+    --outline-hover: hsla(212, 41%, 59%, 0.89);
+    --text: hsla(212, 15%, 17%, 1);
+    --head:hsla(212, 12%, 20%, 1);
+    --subhead:hsla(212, 9%, 33%, 1);
+  
+  
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background: var(--background);
+}
+
+/*
+Buttons
+*/
+button{
+  background: var(--primary);
+  color: var(--background);
+  padding: 0.8rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 0.3rem;
+  width: 100%;
+  transition: all 0.15s;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+button:hover{
+  background: var(--hover);
+}
+button:focus{
+  outline: 3px solid var(--primary);
+}
+
+.outline{
+  background: transparent;
+  color: var(--text);
+  font-weight: bold;
+  border: 2px solid var(--primary);
+}
+.outline:hover{
+  background: var(--outline-hover);
+  color: white;
+}
+/*
+Cards
+*/
+article{
+  box-shadow: 0px 0px 5px #9698AC;
+  border-radius: 0.2rem;
+  overflow-x: scroll;
+  padding: 0.3rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  width: 97%;
+}
+
+
+/*Special Texts*/
+h1{
+  font-size: 2.5rem;
+  margin: 1.5px;
+  color: var(--head);
+}
+h2{
+  font-size: 2.3rem;
+  margin: 1.5px;
+  color: var(--head);
+}
+h3{
+  font-size: 2.1rem;
+  margin: 1.5px;
+  color: var(--head);
+}
+h4{
+  font-size: 1.8rem;
+  margin: 1.5px;
+  color: var(--subhead);
+}
+h5{
+  font-size: 1.6rem;
+  margin: 3px;
+  color: var(--subhead);
+}
+h6{
+  font-size: 1.4rem;
+  margin: 1.5px;
+  color: var(--subhead);
+}
+
+a{
+  color: var(--primary);
+  text-decoration: underline;
+  text-align: center;
+  width: 100%;
+}
+a:active{
+  color: var(--hover);
+}
+
+/*
+Form
+*/
+form{
+  width: 80%;
+  display: grid;
+  justify-items: center;
+}
+
+/*
+Inputs(Only Texts)
+*/
+input, textarea{
+  display: block;
+  width: 90%;
+  background: transparent;
+  color: var(--text);
+}
+
+input[type=text], input[type=email], textarea, input[type=search]{
+  border: 1px solid var(--primary);
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  border-radius: 0.3rem;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus, input[type=search]:focus{
+  outline: 3px solid var(--hover);
+  background: var(--outline-hover);
+  color: white;
+}
+input[type=text]:hover, input[type=email]:hover, textarea:hover{
+  background: var(--outline-hover);
+}
+
+input[type=text]::placeholder, input[type=email]::placeholder, textarea::placeholder{
+  color: var(--subhead);
+  font-weight: 450
+}
+input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, textarea:focus::placeholder, input[type=search]:focus::placeholder{
+  color: white;
+}
+input[type=password]{
+  border: 0.08rem solid var(--primary);
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  width: 90%;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+input[type=password]:focus{
+  outline: 3px solid var(--hover);
+  background: var(--outline-hover);
+  color: white;
+}
+input[type=password]:focus::placeholder{
+  color: white;
+}
+input[type=password]:hover{
+  background: var(--outline-hover);
+}
+
+input[type=password]::placeholder{
+  font-weight: 450
+}
+input[type=search]{
+  border-radius: 5rem;
+}
+
+
+/*
+CheckBox
+*/
+
+input[type=checkbox]{
+  appearance: none;
+  
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 0.3rem;
+  background: var(--outline-hover);
+  border: 1px solid var(--hover);
+  outline: 0px solid var(--hover);
+  
+  display: inline-block;
+  transition: 0.36s all;
+}
+
+input[type=checkbox]:hover{
+  outline: 2px solid var(--hover)
+}
+
+input[type=checkbox]:checked{
+  background-color: var(--hover);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.3rem' height='1.3rem' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*
+Switch Button
+*/
+
+input[type=checkbox][role=switch]{
+  appearance: none;
+  
+  border: 1px solid var(--hover);
+  height: 1.8rem;
+  width: 2.9rem;
+  border-radius: 3rem;
+  line-height: 1.25rem;
+  padding: 1px;
+}
+
+input[type=checkbox][role=switch]:before{
+  display: block;
+  width: calc(1.73rem - (1px * 2));
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0px 0px 5px var(--hover);
+  content: "";
+  transition: margin 0.1008s ease-in-out;
+}
+
+[type=checkbox][role=switch]:checked{
+  background-image: none;
+}
+
+[type=checkbox][role=switch]:checked::before {
+  margin-left: calc(1.125rem - 1px);
+  -webkit-margin-start: calc(1.125rem - 1px);
+  margin-inline-start: calc(1.125rem - 1px);
+}
+
+/*
+Progress Bars
+*/
+
+progress {
+  display: block;
+}
+
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  appearance: none;
+  width: 100%;
+  height: 0.68rem;
+  margin-bottom: calc(5px * 0.5);
+  overflow: hidden;
+  border: 0.3px solid var(--hover);
+  border-radius: 0.2rem;
+  background-color: var(--outline-hover);
+  color: var(--hover);
+}
+progress::-webkit-progress-bar {
+  border-radius: 0.3rem;
+  background: none;
+}
+progress[value]::-webkit-progress-value {
+  transition: all 3s;
+  background-color: var(--hover);
+}
+progress::-moz-progress-bar {
+  background-color: var(--hover);
+}
+
+/*Images*/
+img{
+  width: 100%;
+  height: 15rem;
+  border-radius: 0.3rem;
+}
+article img{
+  border-radius: 0;
+  width: 103%;
+  margin-left: -0.3rem;
+  margin-top: -0.3rem;
+  margin-right: -0.3rem;
+}
+
+/*Preview*/
+.preview{
+  line-height: 21px;
+  height: calc(3*21px);
+  overflow: hidden;
+  position:relative;
+}
+.preview::after{
+  content:'';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 21px;
+  width: 120%;
+  
+  background: linear-gradient(90deg, transparent, white);
+}
+
+
+@media only screen and (min-width: 500px) {
+  .app{
+    width: 60%;
+  }
+  
+  article  img{
+    width: 101.7%;
+  }
+  img{
+    height: 17rem;
+  }
+}
